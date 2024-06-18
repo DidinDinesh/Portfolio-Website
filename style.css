@@ -113,7 +113,7 @@ img {
   padding-block: 5rem 2rem;
 }
   
-.section__title {
+.section-title {
   text-align: center;
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
@@ -271,6 +271,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .home-scroll-box {
@@ -304,4 +305,140 @@ img {
     transform: translateY(1rem);
     opacity: 0;
   }
+}
+
+.work {
+  background-color: var(--container-color);
+}
+
+.work-card {
+  display: block;
+  position: relative;
+  background-color: var(--body-color);
+  padding: 2rem 1.5rem 1.5rem 2rem;
+  color: var(--text-color);
+  transition: 0.4s transform;
+}
+
+.work-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.75rem;
+}
+
+.work-description {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.about-description b {
+  color: var(--first-color-light);
+}
+
+.work-link i {
+  position: absolute;
+  top: 1.8rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--first-color-light);
+  transition: 0.4s transform;
+}
+
+.work-card:hover {
+  transform: translateY(-0.3rem);
+}
+
+.work-card:hover i {
+  transform: translateX(0.5rem);
+}
+
+
+.info-container {
+  row-gap: 3rem;
+}
+
+.info-title {
+  position: relative;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.info-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-color);
+}
+
+.about-description {
+  margin-bottom: 2rem;
+}
+
+.about-img {
+  width: 300px;
+  justify-self: center;
+  mask-image: linear-gradient(to bottom,
+              hsla(var(--hue), 40%, 16%) 60%,
+              transparent 100%);
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  color: var(--text-color);
+  padding: 1.25rem 2rem;
+  transition: 0.4s background-color;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.about-button {
+  width: 100%;
+}
+
+
+.experience-content {
+  row-gap: 2rem;
+}
+
+.experience-data {
+  row-gap: 1rem;
+}
+
+.experience-company {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-bold);
+}
+
+.experience-profession {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.experience-date {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 0.75rem;
+}
+
+.skills-img {
+  width: 35px;
+  margin-bottom: 0.5rem;
+}
+
+.skills-name {
+  font-size: var(--small-font-size);
+}
+
+.skills-content {
+  grid-template-columns: repeat(3, max-content);
+  justify-content: space-around;
+  align-items: flex-end;
 }
