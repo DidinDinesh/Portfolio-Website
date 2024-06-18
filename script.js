@@ -13,3 +13,23 @@ if(navClose) {
         navMenu.classList.remove("show-menu")
     })
 }
+
+
+const navLink = document.querySelectorAll('.nav-link')
+
+const linkAction = ()=> {
+    const navMenu = document.getElementById("nav-menu")
+    navMenu.classList.remove("show-menu")
+}
+
+navLink.forEach(n => n.addEventListener("click", linkAction))
+
+
+
+const blurHeader = ()=> {
+    const header = document.getElementById("header")
+    this.scrollY >= 50 ? header.classList.add("blur-header") 
+                       : header.classList.remoce("blur-header")
+}
+
+window.addEventListener("scroll", blurHeader)
