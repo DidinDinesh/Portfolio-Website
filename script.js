@@ -105,13 +105,18 @@ const scrollActive = () => {
 window.addEventListener("scroll", scrollActive);
 
 
+
 const sr = ScrollReveal({
   origin: "top",
   distance: "60px",
-  duration: 2500,
-  delay: 400,
- // reset: true // animation repeat
+  duration: 2000,
+  delay: 200,
+  reset: true
 })
 
-sr.reveal(`.home-data`)
-sr.reveal(`.home-img`, {delay: 600})
+sr.reveal('.home-data, .experience, .skills, .contact-container')
+sr.reveal('.home-img', {delay:600})
+sr.reveal('.home-scroll', {delay:800})
+sr.reveal('.work-card, .services-card', {interval:100})
+sr.reveal('.about-content', {origin:'right'})
+sr.reveal('.about-img', {origin:'left'})
