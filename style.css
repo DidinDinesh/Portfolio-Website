@@ -618,6 +618,12 @@ img {
   width: 30%;
 }
 
+@media screen and (min-width: 400px) {
+  .contact-container {
+    margin-right: 3rem;
+  }
+}
+
 @media screen and (min-width:540px) {
   .home-container {
     padding-top: 8rem;
