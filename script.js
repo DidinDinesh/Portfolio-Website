@@ -64,3 +64,42 @@ const sendEmail = (e) => {
 }
 
 contactForm.addEventListener("submit", sendEmail)
+
+
+const scrollUp = () => {
+    const scrollUp = document.getElementById("scroll-up")
+
+    //when the scroll is higher than 35o view point
+
+    this.scrollY >= 350 ? scrollUp.classList.add("show-scroll")
+                        : scrollUp.classList.remove("show-scroll")
+}
+
+window.addEventListener("scroll", scrollUp)
+
+
+const sections = document.querySelectorAll("section[id]");
+
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+const scrollActive = () => {
+  const scrollDown = window.scrollY;
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 90;
+    const sectionId = current.getAttribute("id");
+
+    navLinks.forEach(link => {
+      if (link.href.includes(sectionId)) {
+        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+          link.classList.add("active-link");
+        } else {
+          link.classList.remove("active-link");
+        }
+      }
+    });
+  });
+}
+
+window.addEventListener("scroll", scrollActive);
