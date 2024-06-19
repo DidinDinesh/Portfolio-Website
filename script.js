@@ -87,7 +87,7 @@ const scrollActive = () => {
 
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 90;
+    const sectionTop = current.offsetTop + -300;
     const sectionId = current.getAttribute("id");
 
     navLinks.forEach(link => {
@@ -103,3 +103,15 @@ const scrollActive = () => {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+ // reset: true // animation repeat
+})
+
+sr.reveal(`.home-data`)
+sr.reveal(`.home-img`, {delay: 600})
