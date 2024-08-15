@@ -92,7 +92,7 @@ const scrollActive = () => {
 
     navLinks.forEach(link => {
       if (link.href.includes(sectionId)) {
-        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+        if (scrollDown >= sectionTop && scrollDown < sectionTop + sectionHeight) {
           link.classList.add("active-link");
         } else {
           link.classList.remove("active-link");
