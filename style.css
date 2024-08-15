@@ -525,7 +525,6 @@ img {
 }
 
 .contact-social {
-  grid-template-columns: repeat(3, max-content);
   justify-content: center;
   column-gap: 3rem;
 }
@@ -636,12 +635,21 @@ img {
 }
 
 @media screen and (min-width: 300px) {
-  .contact-container {
-    margin-right: 3rem;
-  }
+
 
   .work-image {
     height: 150px;
+  }
+
+  .contact-container {
+    width: 80%;
+    margin: auto;
+    row-gap: 2rem;
+    margin-right: 2rem;
+  }
+  
+  .contact-social {
+    grid-template-columns: repeat(2, max-content);
   }
 
 }
@@ -666,6 +674,10 @@ img {
 
   .work-image {
     height: 180px;
+  }
+
+  .contact-social {
+    grid-template-columns: repeat(4, max-content);
   }
 
 }
